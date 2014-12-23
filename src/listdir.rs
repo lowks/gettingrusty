@@ -1,9 +1,13 @@
-use std::io::fs;
 
-fn main() {
-    let paths = fs::readdir(&Path::new("/tmp")).unwrap();
+pub mod list {
 
-    for path in paths.iter() {
-        println!("Name: {}", path.filename_str().unwrap())
+    use std::io::fs;
+    pub fn dir() {
+        let paths = fs::readdir(&Path::new(".")).unwrap();
+
+        for path in paths.iter() {
+            println!("Name: {}", path.filename_str().unwrap())
+        }
     }
+
 }
