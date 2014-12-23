@@ -1,4 +1,5 @@
-fn main() {
+pub mod write2file {
+    pub fn main() {
 	use std::io::File;
 	let path = Path::new("foo.txt");
         let display = path.display();
@@ -24,4 +25,5 @@ fn main() {
             Err(why) => panic!("File can't be read bro! {} {}", display, why.desc),
             Ok(string) => println!("{} contains this {}", display, string),
         }
+    }
 }
