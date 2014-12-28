@@ -3,6 +3,7 @@ mod function_goodbye_world;
 mod looping;
 mod write_to_file;
 mod pattern_match;
+mod semicolons;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -22,4 +23,5 @@ fn main() {
    looping::looping::main();
    write_to_file::write2file::main();
    pattern_match::pattern_m::main();
+   semicolons::expr::expr();
 }
