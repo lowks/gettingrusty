@@ -4,6 +4,7 @@ mod looping;
 mod write_to_file;
 mod pattern_match;
 mod semicolons;
+mod string;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -24,4 +25,5 @@ fn main() {
    write_to_file::write2file::main();
    pattern_match::pattern_m::main();
    semicolons::expr::expr();
+   string::str::reverse();
 }
