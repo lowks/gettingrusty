@@ -27,4 +27,5 @@ fn main() {
    semicolons::expr::expr();
    string::str::reverse();
    string::str::sort();
+   string::str::replace();
 }
