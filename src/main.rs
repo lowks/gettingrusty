@@ -26,4 +26,5 @@ fn main() {
    pattern_match::pattern_m::main();
    semicolons::expr::expr();
    string::str::reverse();
+   string::str::sort();
 }
