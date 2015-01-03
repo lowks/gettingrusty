@@ -5,6 +5,7 @@ mod write_to_file;
 mod pattern_match;
 mod semicolons;
 mod string;
+mod structures;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -28,4 +29,5 @@ fn main() {
    string::str::reverse();
    string::str::sort();
    string::str::replace();
+   structures::struct_example::example();
 }
