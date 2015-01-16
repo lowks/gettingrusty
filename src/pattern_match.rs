@@ -1,6 +1,6 @@
 pub mod pattern_m {
     pub fn main() {
-        let x: int = 5;
+        let x = 5;
 
         match x {
             5 => println!("Number is 5"),

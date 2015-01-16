@@ -12,7 +12,7 @@ fn print_good_bye_world() {
 }
 
 fn main() {
-   let y = 10i;
+   let y = 10;
 
    if y < 5 {
 	println!("I won't show up");
