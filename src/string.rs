@@ -1,9 +1,16 @@
 pub mod str {
-	pub fn reverse() {
-	let wordy: &'static str = "I am a hello world example";
-		for word in wordy.words().rev() {
-			print!("{}", word);
-		}
+	// http://stackoverflow.com/questions/27996430/reversing-a-string-in-rustlang-1-0-0/27996791#27996791
+	pub fn reverse() -> String {
+	let wordy: &str = "lowks";
+	let wordy_reverse: String = wordy
+	    .graphemes(true)
+	    .rev()
+	    // .flat_map(|g| g.chars())
+	    .collect();
+		// for word in wordy.words().rev() {
+	        //		print!("{}", word);
+		// }
+	wordy_reverse
 	}
 
 	pub fn sort() {
@@ -27,4 +34,6 @@ pub mod str {
 
 fn test_replace() {
 	assert_eq!("Hello World! -> Goodbye World!", str::replace());
+	let reverse: String = str::reverse();
+	assert_eq!("skwol", &*reverse);
 }
