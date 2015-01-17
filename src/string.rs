@@ -15,10 +15,16 @@ pub mod str {
 		}	
 	}
 
-	pub fn replace() {
+	pub fn replace() -> String {
 		let string_to_replace = String::from_str("Hello World!");
 		let new_string: String = string_to_replace.replace("Hello", "Goodbye");
-		println!("{} -> {}", string_to_replace, new_string);
+		format!("{} -> {}", string_to_replace, new_string)
 
 	}
+}
+
+#[test]
+
+fn test_replace() {
+	assert_eq!("Hello World! -> Goodbye World!", str::replace());
 }
