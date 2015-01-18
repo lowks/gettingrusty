@@ -13,13 +13,18 @@ pub mod str {
 	wordy_reverse
 	}
 
-	pub fn sort() {
-	let wordy: &'static str = "I am a hello world example";
+	pub fn sort() -> String {
+	let wordy: &'static str = "dabc";
 		let mut chars: Vec<char> = wordy.chars().collect();		
 		chars.sort();
-		for char in chars.iter() {
-			println!("{}", char);
-		}	
+                let mut output = String::new();
+                for c in chars.into_iter() {
+                    output.push(c);
+                }
+                output
+		// for char in chars.iter() {
+		//	println!("{}", char);
+		//}	
 	}
 
 	pub fn replace() -> String {
@@ -36,4 +41,5 @@ fn test_replace() {
 	assert_eq!("Hello World! -> Goodbye World!", str::replace());
 	let reverse: String = str::reverse();
 	assert_eq!("skwol", &*reverse);
+        assert_eq!("abcd", str::sort()); 
 }
