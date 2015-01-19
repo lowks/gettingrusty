@@ -1,5 +1,5 @@
 pub mod expr {
-	pub fn expr() {
+	pub fn expr() -> int {
 		let x = 5;
 
 		let y = {
@@ -16,5 +16,12 @@ pub mod expr {
 		println!("x is {}", x);
 		println!("y is {}", y);
 		println!("z is {:?}", z);
+                y
 	}
+}
+
+#[test]                                                                                                                                                                                      
+
+fn test_expr() {
+    assert_eq!(9, expr::expr());
 }

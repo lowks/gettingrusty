@@ -13,6 +13,10 @@ pub mod str {
 	wordy_reverse
 	}
 
+        pub fn backwords(word: &str) -> String {
+            word.graphemes(true).rev().collect()
+        }
+
 	pub fn sort() -> String {
 	let wordy: &'static str = "dabc";
 		let mut chars: Vec<char> = wordy.chars().collect();		
@@ -40,6 +44,8 @@ pub mod str {
 fn test_replace() {
 	assert_eq!("Hello World! -> Goodbye World!", str::replace());
 	let reverse: String = str::reverse();
+        let backwords: String = str::backwords("lowks");
 	assert_eq!("skwol", &*reverse);
+	assert_eq!("skwol", &*backwords);
         assert_eq!("abcd", str::sort()); 
 }
