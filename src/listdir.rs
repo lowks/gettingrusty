@@ -1,8 +1,8 @@
 
 pub mod list {
 
-    use std::io::fs;
-    use std::io::fs::PathExtensions;
+    use std::old_io::fs;
+    use std::old_io::fs::PathExtensions;
 
     pub fn dir() {
         let paths = fs::readdir(&Path::new(".")).unwrap();

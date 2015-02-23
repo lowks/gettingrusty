@@ -1,6 +1,6 @@
 pub mod write2file {
     pub fn main() {
-	use std::io::File;
+	use std::old_io::File;
 	let path = Path::new("foo.txt");
         let display = path.display();
 
