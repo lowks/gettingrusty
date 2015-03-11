@@ -6,6 +6,7 @@ mod pattern_match;
 mod semicolons;
 mod string;
 mod structures;
+mod guard_clause;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
