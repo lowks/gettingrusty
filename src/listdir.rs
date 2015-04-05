@@ -1,8 +1,9 @@
+#![feature(old_io, old_path, os, old_fs)]
 
 pub mod list {
 
-    use std::old_io::fs;
     use std::old_io::fs::PathExtensions;
+    use std::old_path::{Path};
 
     pub fn dir() {
         let paths = fs::readdir(&Path::new(".")).unwrap();
