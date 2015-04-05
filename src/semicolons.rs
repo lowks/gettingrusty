@@ -1,5 +1,5 @@
 pub mod expr {
-	pub fn expr() -> int {
+	pub fn expr() -> i32 {
 		let x = 5;
 
 		let y = {

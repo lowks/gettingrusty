@@ -1,5 +1,7 @@
+#![feature(old_io, old_path, os, old_fs)]
 pub mod write2file {
     pub fn main() {
+	use std::old_path::{Path};
 	use std::old_io::File;
 	let path = Path::new("foo.txt");
         let display = path.display();
