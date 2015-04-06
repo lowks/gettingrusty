@@ -1,5 +1,5 @@
 pub mod guard {
-    	pub fn guards() -> int {
+    	pub fn guards() -> i32 {
 	    let pair = (2, -2);
 	    match pair {
 		(x, y) if x == y => y,

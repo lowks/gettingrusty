@@ -1,5 +1,5 @@
 pub mod pattern_m {
-    pub fn main() -> int {
+    pub fn main() -> i32 {
         let x = 5;
         match x {
             5 => 5, 
