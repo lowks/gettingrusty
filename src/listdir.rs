@@ -1,12 +1,11 @@
-#![feature(old_io, old_path, os, old_fs)]
-
 pub mod list {
 
-    use std::old_io::fs::PathExtensions;
-    use std::old_path::{Path};
+    use std::io;
+    use std::fs::{self, DirEntry};
+    use std::path::Path;
 
     pub fn dir() {
-        let paths = fs::readdir(&Path::new(".")).unwrap();
+        let paths = fs::read_dir(&Path::new(".")).unwrap();
 
         for path in paths.iter() {
             println!("Name: {}", path.filename_str().unwrap())
