@@ -1,6 +1,6 @@
 pub mod looping {
     pub fn main() {
-	for x in range(0, 10) {
+	for x in (0..10) {
 	    println!( "{}", x);
 	}
 
