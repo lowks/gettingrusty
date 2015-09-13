@@ -24,7 +24,6 @@ fn main() {
    function_goodbye_world::goodbye_world::goodbye_world::print_good_bye_world();
    listdir::list::dir();
    looping::looping::main();
-   write_to_file::write2file::main();
    pattern_match::pattern_m::main();
    semicolons::expr::expr();
    string::str::reverse();
