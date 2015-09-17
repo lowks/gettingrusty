@@ -11,7 +11,7 @@ fn print_stuff() {
 	    println!("{}", x);
 	}
 }
-	fn main() {
+	pub fn main() {
 	   print_stuff();
 	}
 }
