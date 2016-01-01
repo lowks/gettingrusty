@@ -1,6 +1,6 @@
 pub mod looping {
 fn print_stuff() {
-	for x in (0..10) {
+	for x in 0..10 {
 	    println!( "{}", x);
 	}
 
