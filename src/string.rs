@@ -14,9 +14,9 @@ pub mod str {
 	}
 
         // pub fn backwords(word: str) -> String {
-        pub fn backwords(word: String) -> String {
-            word.chars().rev().collect()
-        }
+    pub fn backwords(word: String) -> String {
+       word.chars().rev().collect()
+    }
 
 	pub fn sort() -> String {
 	let wordy = "dabc";
@@ -46,7 +46,7 @@ pub mod str {
 fn test_replace() {
 	assert_eq!("Hello World! -> Goodbye World!", str::replace());
 	let reverse: String = str::reverse();
-        let backwords  = str::backwords("lowks");
+        let backwords  = str::backwords("lowks".to_string());
 	assert_eq!("skwol", &*reverse);
 	assert_eq!("skwol", &*backwords);
         assert_eq!("abcd", str::sort()); 

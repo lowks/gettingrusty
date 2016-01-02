@@ -28,6 +28,8 @@ fn main() {
    pattern_match::pattern_m::main();
    semicolons::expr::expr();
    string::str::reverse();
+   let forward_string = "hellohellohello".to_string();
+   string::str::backwords(forward_string);
    string::str::sort();
    string::str::replace();
    structures::struct_example::example();
