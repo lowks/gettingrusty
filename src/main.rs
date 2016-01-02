@@ -4,7 +4,7 @@ mod looping;
 // mod write_to_file;
 mod pattern_match;
 mod semicolons;
-// mod string;
+mod string;
 mod structures;
 // mod guard_clause;
 
@@ -14,6 +14,7 @@ fn print_good_bye_world() {
 
 fn main() {
    let y = 10;
+   print_good_bye_world(); 
 
    if y < 5 {
 	println!("I won't show up");
@@ -26,8 +27,9 @@ fn main() {
    looping::looping::main();
    pattern_match::pattern_m::main();
    semicolons::expr::expr();
-   // string::str::reverse();
-   // string::str::sort();
-   // string::str::replace();
+   string::str::reverse();
+   string::str::sort();
+   string::str::replace();
    structures::struct_example::example();
 }
+
