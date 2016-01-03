@@ -6,7 +6,8 @@ mod pattern_match;
 mod semicolons;
 mod string;
 mod structures;
-// mod guard_clause;
+mod guard_clause;
+mod filesystem;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -33,5 +34,7 @@ fn main() {
    string::str::sort();
    string::str::replace();
    structures::struct_example::example();
+   guard_clause::guard::guards();
+   filesystem::mkdir::main();
 }
 
