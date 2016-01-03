@@ -8,6 +8,7 @@ mod string;
 mod structures;
 mod guard_clause;
 mod filesystem;
+mod matching;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -36,5 +37,6 @@ fn main() {
    structures::struct_example::example();
    guard_clause::guard::guards();
    filesystem::mkdir::main();
+   matching::matches::main();
 }
 
