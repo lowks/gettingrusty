@@ -10,6 +10,7 @@ mod guard_clause;
 mod filesystem;
 mod matching;
 mod array_example;
+mod tuple;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -39,6 +40,7 @@ fn main() {
    guard_clause::guard::guards();
    filesystem::mkdir::main();
    matching::matches::main();
-   array_example::array_example::main(); 
+   array_example::array_example::main();
+   tuple::tuple::run(); 
 }
 
