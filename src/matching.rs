@@ -1,7 +1,5 @@
 pub mod matches {
-
     pub fn main() {
-
         let x = 1;
         match x {
             1 => println!("I am 1"),

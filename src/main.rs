@@ -1,4 +1,4 @@
-mod simple_listdir;
+// mod simple_listdir;
 mod function_goodbye_world;
 mod looping;
 // mod write_to_file;
@@ -9,6 +9,8 @@ mod structures;
 mod guard_clause;
 mod filesystem;
 mod matching;
+mod array_example;
+mod tuple;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -25,7 +27,7 @@ fn main() {
    }
    
    function_goodbye_world::goodbye_world::goodbye_world::print_good_bye_world();
-   simple_listdir::simple_listdir::main();
+   // simple_listdir::simple_listdir::main();
    looping::looping::main();
    pattern_match::pattern_m::main();
    semicolons::expr::expr();
@@ -38,5 +40,7 @@ fn main() {
    guard_clause::guard::guards();
    filesystem::mkdir::main();
    matching::matches::main();
+   array_example::array_example::main();
+   tuple::tuple::run(); 
 }
 
