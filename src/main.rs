@@ -11,6 +11,7 @@ mod filesystem;
 mod matching;
 mod array_example;
 mod tuple;
+mod functional;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -41,6 +42,7 @@ fn main() {
    filesystem::mkdir::main();
    matching::matches::main();
    array_example::array_example::main();
-   tuple::tuple::run(); 
+   tuple::tuple::run();
+   functional::functional::main();
 }
 
