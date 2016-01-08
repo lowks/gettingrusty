@@ -7,5 +7,16 @@ pub mod functional {
         for pair in "foo".chars().enumerate() {
             println!("{:?}", pair);
         }
+
+        let strs = ["hello", "world", "yo!"];
+
+        for (i, s) in strs.iter().enumerate() {
+            println!("{} {}", i, s);
+        }
+
+        for item in strs.iter() {
+            println!("### {}", item);
+        }
+        
     }
 }
