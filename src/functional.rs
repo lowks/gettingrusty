@@ -1,5 +1,6 @@
 pub mod functional {
     pub fn main() {
+
         let a = [1, 2, 3, 4, 5];
         println!("\n\n====== Functional example ============");
         println!("Sum is {}", a.iter().fold(0, |sum, i| sum + i));
@@ -16,6 +17,10 @@ pub mod functional {
 
         for item in strs.iter() {
             println!("### {}", item);
+        }
+
+        for item in 0..strs.len() {
+            println!("%%% {}", strs[item].to_uppercase());
         }
         
     }
