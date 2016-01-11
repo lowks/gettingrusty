@@ -22,6 +22,20 @@ pub mod functional {
         for item in 0..strs.len() {
             println!("%%% {}", strs[item].to_uppercase());
         }
-        
+
+        let a = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        for x in a.iter()
+            .map(|&x| x + 10) {
+            println!("After mapping and adding 10 to list {}", x);
+            }
+
+        let b = [2, 3, 4, 6, 8];
+
+        for x in b.iter()
+            .skip(3)
+            .take(1) {
+                println!("This is skipped {}", x)
+            }
     }
 }
