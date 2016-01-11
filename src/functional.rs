@@ -29,5 +29,13 @@ pub mod functional {
             .map(|&x| x + 10) {
             println!("After mapping and adding 10 to list {}", x);
         }
+
+        let b = [2, 3, 4, 6, 8];
+
+        for x in b.iter()
+            .skip(3)
+            .take(1) {
+                println!("This is skipped {}", x)
+            }
     }
 }
