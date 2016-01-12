@@ -69,5 +69,17 @@ pub mod functional {
             .fold(1, |a, b| a * b);
         println!("The product of d is {}", x);
 
+        println!("######### Multiples of 10 #############");
+        for i in (1..100).filter(|&x| x % 10 == 0) {
+            println!("{}", i);
+        }
+
+        println!("######### Another fold example #############");
+        let x = (1..200)
+                .filter(|&x| x % 5 == 0)
+                .fold(0, |sum, x| sum + x);
+        println!("{}", x);
+
+
     }
 }
