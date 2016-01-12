@@ -37,5 +37,37 @@ pub mod functional {
             .take(1) {
                 println!("This is skipped {}", x)
             }
+
+        for x in b.iter()
+            .filter(|&x| *x > 2) { 
+                println!("{} is bigger than 2 !", x)
+            }
+
+        for x in b.iter()
+            .skip_while(|&x| *x < 4) { 
+                println!("{} is less than 8 !", x)
+            }
+
+        for x in b.iter()
+            .max() { 
+                println!("{} is the max number !", x)
+            }
+
+        for x in b.iter()
+            .min() { 
+                println!("{} is the min number !", x)
+            }
+
+
+        // bit.ly/1KaDhWO
+        println!("Using fold method to do product");
+        
+        let d = [2, 3, 4, 6, 8];
+
+        let x = d.iter()
+            .take(5)
+            .fold(1, |a, b| a * b);
+        println!("The product of d is {}", x);
+
     }
 }
