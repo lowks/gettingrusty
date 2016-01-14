@@ -1,6 +1,31 @@
 pub mod functional {
-    pub fn main() {
 
+    pub fn product(input_array: &mut [i32]) -> i32 {
+        let x = input_array.iter()
+            .take(5)
+            .fold(1, |a, b| a * b);
+        x
+    }
+
+    pub fn min(input_array: &[i32]) -> i32 {
+        let x = input_array
+            .iter()
+            .min()
+            .unwrap();
+        *x
+    }
+
+    // pub fn factor(input_array: &mut [i32]) ->  std::iter::Filter::std::slice::Iter<i32> {
+    //   fn (&&i32) -> bool {
+    //     fn even(x: &&i32) -> bool { **x % 2 == 0 }
+    //     let x = input_array
+    //         .iter()
+    //         .filter(even as for<'r> fn(&'r &_) -> _);
+    //     x
+    // }}
+
+    pub fn main() {
+        
         let a = [1, 2, 3, 4, 5];
         println!("\n\n====== Functional example ============");
         println!("Sum is {}", a.iter().fold(0, |sum, i| sum + i));
@@ -44,6 +69,11 @@ pub mod functional {
             }
 
         for x in b.iter()
+            .filter(|&x| *x % 2 == 0) { 
+                println!("{} is factor of 2 !", x)
+            }
+
+        for x in b.iter()
             .skip_while(|&x| *x < 4) { 
                 println!("{} is less than 8 !", x)
             }
@@ -69,17 +99,21 @@ pub mod functional {
             .fold(1, |a, b| a * b);
         println!("The product of d is {}", x);
 
-        println!("######### Multiples of 10 #############");
-        for i in (1..100).filter(|&x| x % 10 == 0) {
-            println!("{}", i);
-        }
+        // for x in d.iter().cycle() { println!("{}" ,x) }
 
-        println!("######### Another fold example #############");
-        let x = (1..200)
-                .filter(|&x| x % 5 == 0)
-                .fold(0, |sum, x| sum + x);
-        println!("{}", x);
+        let mut input_array = [1, 2, 3, 4, 5, 6]; 
+        println!("Product:: {}", product(&mut input_array));
 
-
+        let mut input_array2 = [10, 9, 8, 7, 6, 5];
+        println!("Min:: {}", min(&mut input_array2));
     }
+}
+
+#[test]
+
+fn test_functional() {
+    let mut input_array = [1, 1, 1, 1];
+    assert_eq!(1, functional::product(&mut input_array));
+    let mut input_array = [1, 2, 3, 4];
+    assert_eq!(1, functional::min(&mut input_array));
 }
