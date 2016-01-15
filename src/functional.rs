@@ -99,6 +99,13 @@ pub mod functional {
             .fold(1, |a, b| a * b);
         println!("The product of d is {}", x);
 
+        assert_eq!(a.iter().all(|x| *x + 10);
+
+        // for x in d.iter().all(|x| *x > 2)
+           // {
+           //     println!("{} is bigger than 2", x);
+           // }
+
         // for x in d.iter().cycle() { println!("{}" ,x) }
 
         let mut input_array = [1, 2, 3, 4, 5, 6]; 
