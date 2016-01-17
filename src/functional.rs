@@ -15,6 +15,13 @@ pub mod functional {
         *x
     }
 
+    pub fn count_elem(input_array: &[i32]) -> usize {
+        let x = input_array
+            .iter()
+            .count();
+        x
+    }
+
     // pub fn factor(input_array: &mut [i32]) ->  std::iter::Filter::std::slice::Iter<i32> {
     //   fn (&&i32) -> bool {
     //     fn even(x: &&i32) -> bool { **x % 2 == 0 }
@@ -29,7 +36,8 @@ pub mod functional {
         let a = [1, 2, 3, 4, 5];
         println!("\n\n====== Functional example ============");
         println!("Sum is {}", a.iter().fold(0, |sum, i| sum + i));
-        println!("Count of numbers {}", a.iter().count());
+        // println!("Count of numbers {}", a.iter().count());
+        println!("Count of elem is {} !", count_elem(&a));
         for pair in "foo".chars().enumerate() {
             println!("{:?}", pair);
         }
@@ -99,7 +107,7 @@ pub mod functional {
             .fold(1, |a, b| a * b);
         println!("The product of d is {}", x);
 
-        assert_eq!(a.iter().all(|x| *x + 10);
+        // assert_eq!(a.iter().all(|x| *x + 10));
 
         // for x in d.iter().all(|x| *x > 2)
            // {
@@ -113,8 +121,10 @@ pub mod functional {
 
         let mut input_array2 = [10, 9, 8, 7, 6, 5];
         println!("Min:: {}", min(&mut input_array2));
+
     }
 }
+
 
 #[test]
 
@@ -123,4 +133,5 @@ fn test_functional() {
     assert_eq!(1, functional::product(&mut input_array));
     let mut input_array = [1, 2, 3, 4];
     assert_eq!(1, functional::min(&mut input_array));
+    assert_eq!(4, functional::count_elem(&input_array));
 }
