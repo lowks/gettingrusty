@@ -22,6 +22,16 @@ pub mod functional {
         x
     }
 
+
+    //pub fn return_element(input_array: &[i32], number_to_take: usize) -> () {
+
+    //    let x = input_array
+    //        .iter()
+    //        .take(number_to_take)
+    //        .collect();
+    //    *x
+    //}
+
     // pub fn factor(input_array: &mut [i32]) ->  std::iter::Filter::std::slice::Iter<i32> {
     //   fn (&&i32) -> bool {
     //     fn even(x: &&i32) -> bool { **x % 2 == 0 }
@@ -33,6 +43,8 @@ pub mod functional {
 
     pub fn main() {
         
+        let it = (0..10).filter(|x| x % 2 == 0).chain(15..20);
+        assert_eq!((5, Some(15)), it.size_hint());
         let a = [1, 2, 3, 4, 5];
         println!("\n\n====== Functional example ============");
         println!("Sum is {}", a.iter().fold(0, |sum, i| sum + i));
@@ -134,4 +146,5 @@ fn test_functional() {
     let mut input_array = [1, 2, 3, 4];
     assert_eq!(1, functional::min(&mut input_array));
     assert_eq!(4, functional::count_elem(&input_array));
+    assert_eq!([1,2], functional::return_element(&input_array, 2));
 }
