@@ -44,10 +44,19 @@ pub mod str {
 #[test]
 
 fn test_replace() {
-	assert_eq!("Hello World! -> Goodbye World!", str::replace());
-	let reverse: String = str::reverse();
-        let backwords  = str::backwords("lowks".to_string());
-	assert_eq!("skwol", &*reverse);
-	assert_eq!("skwol", &*backwords);
-        assert_eq!("abcd", str::sort()); 
+    assert_eq!("Hello World! -> Goodbye World!", str::replace());
+    let reverse: String = str::reverse();
+    let backwords  = str::backwords("lowks".to_string());
+    assert_eq!("skwol", &*reverse);
+    assert_eq!("skwol", &*backwords);
+    assert_eq!("abcd", str::sort());   
+}
+
+#[test]
+
+fn test_truncate() {
+    let mut s = String::from("helloworld");
+    s.truncate(5);
+    assert_eq!("hello", s);
+    assert_eq!(s.len(), 5);
 }
