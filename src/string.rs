@@ -60,3 +60,20 @@ fn test_truncate() {
     assert_eq!("hello", s);
     assert_eq!(s.len(), 5);
 }
+
+#[test]
+
+fn test_push_string() {
+    let mut s = String::from("hello");
+    s.push_str("world");
+    assert_eq!("helloworld", s);
+}
+
+#[test]
+
+fn test_string_capacity() {
+    let mut s = String::new();
+    let s2 = String::from("helloworld");
+    s.reserve(s2.capacity());
+    assert_eq!(s.capacity(), 20);
+}
