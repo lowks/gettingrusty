@@ -26,6 +26,9 @@ fn main() {
    } else if  y == 10  {
    	print_good_bye_world(); 
    }
+
+    let original_string = "HelloWorld";
+    assert_eq!("HelloWorld", original_string.clone());
    
    function_goodbye_world::goodbye_world::goodbye_world::print_good_bye_world();
    // simple_listdir::simple_listdir::main();
