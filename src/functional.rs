@@ -119,6 +119,11 @@ pub mod functional {
             .fold(1, |a, b| a * b);
         println!("The product of d is {}", x);
 
+        let x = d.iter()
+            .take(5)
+            .fold(0, |a,b| a + b);
+        println!("The sum of all elements in d is {}", x);
+
         // assert_eq!(a.iter().all(|x| *x + 10));
 
         // for x in d.iter().all(|x| *x > 2)
