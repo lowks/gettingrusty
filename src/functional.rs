@@ -124,6 +124,14 @@ pub mod functional {
             .fold(0, |a,b| a + b);
         println!("The sum of all elements in d is {}", x);
 
+
+        let e = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        let x = e.iter()
+                .cloned()
+                .filter(|&x| x % 3 == 0)
+                .fold(0, |sum, i| sum + i);
+        println!("Sum and filter together result {}", x);
         // assert_eq!(a.iter().all(|x| *x + 10));
 
         // for x in d.iter().all(|x| *x > 2)
