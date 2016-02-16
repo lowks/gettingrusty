@@ -23,6 +23,10 @@ fn print_stuff() {
 	    println!( "{}", x);
 	}
 
+        for _ in 0..4 {
+            println!("Printing 5 times")
+        }
+
 	println!("Iter function loop");
 
 	let values = vec![1, 2, 3, 4];
@@ -33,6 +37,7 @@ fn print_stuff() {
 	pub fn main() {
 	   print_stuff();
 	}
+
 }
 
 
