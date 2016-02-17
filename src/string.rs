@@ -75,5 +75,5 @@ fn test_string_capacity() {
     let mut s = String::new();
     let s2 = String::from("helloworld");
     s.reserve(s2.capacity());
-    assert_eq!(s.capacity(), 20);
+    assert_eq!(s.capacity(), 10);
 }
