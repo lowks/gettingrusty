@@ -18,5 +18,11 @@ pub mod matches {
             0 => println!("y is divisible by 5!"),
             _ => println!("y is NOT divisible by 5"),
         }
+
+	let z = "a A Word";
+
+	let k = z.len() + 5;
+
+	println!("The value of k is {}", k);
     }
 }
