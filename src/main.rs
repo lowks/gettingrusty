@@ -12,6 +12,7 @@ mod matching;
 mod array_example;
 mod tuple;
 mod functional;
+mod conditionals;
 
 fn print_good_bye_world() {
     println!("Goodbye, cruel world!");
@@ -47,5 +48,6 @@ fn main() {
    array_example::array_example::main();
    tuple::tuple::run();
    functional::functional::main();
+   conditionals::conditional::main();
 }
 
