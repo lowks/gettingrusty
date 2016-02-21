@@ -1,4 +1,11 @@
 pub mod matches {
+
+    pub fn multiple_match(a: i32) -> i32 {
+       match a { 
+            1 | 2 => return 0,
+            _ => return 10,
+       } 
+    }
     pub fn main() {
         let x = 1;
         match x {
@@ -24,5 +31,12 @@ pub mod matches {
 	let k = z.len() + 5;
 
 	println!("The value of k is {}", k);
+    println!("The value of a is {}", multiple_match(1));
     }
+}
+
+#[test]
+
+fn test_matching() {
+    assert_eq!(matches::multiple_match(1), 0);
 }
