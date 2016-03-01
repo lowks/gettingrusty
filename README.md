@@ -1,4 +1,4 @@
 gettingrusty
 ============
 
-Learning rustlang. A place for me to fomally collect all my learnings on rustlang.
+Learning rustlang. A place for me to collect all my learnings on rustlang.
